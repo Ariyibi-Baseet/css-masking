@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Primary Meta Tags -->
+<title>Learn CSS Masking — Home</title>
+<meta name="title" content="Learn CSS Masking — Home">
+<meta name="description" content="Learn Css Masking, Css masking property, masked image - css">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="Meta Tags — Preview, Edit and Generate">
+<meta property="og:description" content="Learn Css Masking, Css masking property, masked image - css">
+<meta property="og:image" content="">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="Css masking image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate">
+<meta property="twitter:description" content="Learn Css Masking, Css masking property, masked image - css">
+<meta property="twitter:image" content="">
+    <title>CSS masking</title>
+<style>
+ body{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .mask-image{
+/* to center the masked image div */
+        margin: auto;
+        width:700px;
+        height: 400px;
+/* use this if mask-image and -webkit-mask-image together, using only one may not work sometimes*/
+        mask-image: url('./tiidelab4.png');
+        -webkit-mask-image: url('./tiidelab4.png');
+/* use this if mask-size and -webkit-mask-size together, using only one may not work sometimes*/
+        mask-size: 100%;
+        -webkit-mask-size : 100%;
+/* use this if mask-repeat and -webkit-mask-repeat together, using only one may not work sometimes*/
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        z-index:1;
+    }
+    h1{
+        color: red;
+        position:absolute;
+        z-index:2;
+    }
+
+</style>
+</head>
+<body>
+    <div class="mask-image">
+        <img src="./africa.jpg" alt="">
+    </div>
+</body>
+</html>
